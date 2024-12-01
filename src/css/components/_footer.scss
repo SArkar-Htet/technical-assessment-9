@@ -6,6 +6,12 @@
     .footer-container {
       @apply rounded-[14px];
       background: linear-gradient(76deg, rgba(230, 62, 33, 0.20) 10.4%, rgba(51, 19, 14, 0.00) 25.53%), #1B1B1B;
+
+      .social {
+        li a {
+          @apply transition-all duration-300 hover:font-bold hover:text-orange-1 text-white-gray;
+        }
+      }
     }
   }
 }

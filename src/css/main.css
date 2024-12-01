@@ -248,4 +248,7 @@ body {
 .footer .footer-wrapper .footer-container {
   @apply rounded-[14px];
   background: linear-gradient(76deg, rgba(230, 62, 33, 0.2) 10.4%, rgba(51, 19, 14, 0) 25.53%), #1B1B1B;
+}
+.footer .footer-wrapper .footer-container .social li a {
+  @apply transition-all duration-300 hover:font-bold hover:text-orange-1 text-white-gray;
 }/*# sourceMappingURL=main.css.map */
