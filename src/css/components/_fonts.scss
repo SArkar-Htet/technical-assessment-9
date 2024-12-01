@@ -1,0 +1,90 @@
+:root {
+  // Font Sizes
+  --min-vw: 640;
+  --max-vw: 1440;
+
+  /* convert to px */
+  --min-vw-px: calc(var(--min-vw) * 1px);
+  --max-vw-px: calc(var(--max-vw) * 1px);
+
+  /* font sizes at $max_vw */
+  --text-extra-lg: 36;
+  --text-large: 24;
+  --text-default: 20;
+  --text-small: 16;
+  --text-extra-sm: 13;
+
+  /* font sizes at --min-vw */
+  --text-extra-lg-min: calc(var(--text-extra-lg) * 0.778);
+  --text-large-min: calc(var(--text-large) * 0.84);
+  --text-default-min: calc(var(--text-default) * 0.9);
+  --text-small-min: calc(var(--text-small) * 0.875);
+  --text-extra-sm-min: calc(var(--text-extra-sm) * 0.77);
+}
+body {
+  @apply font-primary text-default;
+}
+
+@layer components {
+  .font-primary {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+  }
+
+  .fluid-fs {
+    --max-fs: var(--text-default);
+    --min-fs: var(--text-default-min);
+
+    --slope: calc((var(--max-fs) - var(--min-fs)) / (var(--max-vw) - var(--min-vw)));
+
+    --min-fs-px: calc(var(--min-fs) * 1px);
+    --max-fs-px: calc(var(--max-fs) * 1px);
+    --fs-px: calc(var(--slope) * (100vw - var(--min-vw-px)) + var(--min-fs-px));
+
+    font-size: clamp(var(--min-fs-px), var(--fs-px), var(--max-fs-px));
+  }
+
+  .text-extra-lg {
+    @apply fluid-fs;
+
+    --max-fs: var(--text-extra-lg);
+    --min-fs: var(--text-extra-lg-min);
+    line-height: normal;
+    @apply tracking-[120%];
+  }
+
+  .text-large {
+    @apply fluid-fs;
+
+    --max-fs: var(--text-large);
+    --min-fs: var(--text-large-min);
+    line-height: 1.5;
+  }
+
+  .text-default {
+    @apply fluid-fs;
+
+    --max-fs: var(--text-default);
+    --min-fs: var(--text-default-min);
+    line-height: 1.5;
+  }
+
+  .text-small {
+    @apply fluid-fs;
+
+    --max-fs: var(--text-small);
+    --min-fs: var(--text-small-min);
+    line-height: 1.5;
+  }
+
+  .text-extra-sm {
+    @apply fluid-fs;
+
+    --max-fs: var(--text-extra-sm);
+    --min-fs: var(--text-extra-sm-min);
+    line-height: 1.5;
+  }
+
+}

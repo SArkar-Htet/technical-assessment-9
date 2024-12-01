@@ -1,0 +1,38 @@
+.personal-exp {
+  @apply grid gap-5 grid-cols-2;
+  grid-template-areas: 
+    "product-design product-design"
+    "user-exp no-code";
+  .content-article {
+    @apply text-center flex-1 relative p-0.5 overflow-hidden border-none my-0;
+
+    &.product-design {
+      grid-area: product-design;
+    }
+    &.user-exp {
+      grid-area: user-exp;
+    }
+    &.no-code {
+      grid-area: no-code;
+    }
+
+    .content {
+      @apply py-8 xl:py-[60px] px-5 xl:px-10 rounded-[14px];
+    }
+
+    &.right-transparent {
+      background: linear-gradient(39deg, #262626 80%, #E63E21);
+      .content {
+        background: linear-gradient(249deg, rgba(230, 62, 33, 0.20) 18.59%, rgba(51, 19, 14, 0.00) 53.25%), #1B1B1B;
+      }
+    }
+
+    &.left-transparent {
+      background: linear-gradient(228deg, #262626 80%, #E63E21);
+      .content {
+        background: linear-gradient(76deg, rgba(230, 62, 33, 0.20) 10.4%, rgba(51, 19, 14, 0.00) 25.53%), #1B1B1B;
+      }
+      
+    }
+  }
+}

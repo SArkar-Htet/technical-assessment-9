@@ -1,0 +1,44 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  @apply text-gray;
+
+  h1, h2, h3 {
+    @apply font-medium;
+  }
+
+  section .content-article {
+    @apply bg-dark-gray-2 border-2 border-dark-gray-1 rounded-[14px] py-8 xl:py-[60px] px-5 xl:px-10;
+
+    &.personal-product {
+      @apply px-7 xl:px-14;
+    }
+
+    &.ios-mb {
+      @apply pb-0 pt-6 xl:pt-12;
+    }
+
+    &.ai-music-product {
+      @apply py-5 xl:py-10;
+    }
+
+    &.ai-map {
+      @apply py-6 xl:py-12;
+    }
+  }
+
+  img {
+    @apply size-auto object-center object-cover;
+  }
+
+  .active-status {
+    @apply w-fit flex items-center justify-between gap-x-1 xs:gap-x-2.5 py-[5px] px-2.5 xs:px-[17px] rounded-[14px] bg-dark-gray border border-solid border-dark-gray-1;
+  }
+}

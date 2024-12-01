@@ -1,0 +1,20 @@
+.nav-menu {
+  @apply uppercase;
+  li a {
+    @apply transition-all duration-300;
+    @apply hover:font-bold hover:text-orange-1;
+  }
+
+  &.nav-menu-mb {
+    @apply absolute top-14 right-5 left-5 bg-dark-gray z-[99] rounded-[14px] border-2 border-dark-gray-1 text-white xs:hidden;
+    li {
+      @apply mt-5 first:mt-0;
+    }
+  }
+}
+
+.menu-toggler {
+  span {
+    @apply block w-7 h-0.5 bg-white mt-1 first:mt-0;
+  }
+}

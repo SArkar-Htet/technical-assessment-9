@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components/variables";
+@import "./components/globals";
+@import "./components/container";
+@import "./components/fonts";
+@import "./components/header";
+@import "./components/personal-info";
+@import "./components/personal-jobs";
+@import "./components/personal-exp";
+@import "./components/footer";

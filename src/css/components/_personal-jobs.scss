@@ -1,0 +1,25 @@
+.personal-jobs {
+  .job-info {
+    @apply mt-4 xl:mt-9 first:mt-0;
+    a {
+      @apply flex items-center justify-between gap-5;
+      .job-title {
+        @apply text-large text-white font-medium transition-colors duration-300;
+      }
+      
+      .year {
+        @apply block mt-3;
+      }
+
+      .company {
+        @apply block;
+      }
+
+      &:hover {
+        .job-title {
+          @apply text-orange-1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.personal-info {
+  .btn-cta {
+    @apply flex items-center gap-x-3 bg-dark-gray rounded-[7px] border-[1.2px] border-dark-gray-1 font-medium;
+    @apply transition-colors duration-300;
+
+    span {
+      @apply py-2.5;
+
+      &.btn-icon {
+        @apply pl-1 border-l-[1.2px] border-dark-gray-1;
+        @apply transition-colors duration-300;
+        
+        svg path {
+          @apply transition-colors duration-300;
+        }
+      }
+    }
+    
+    &:hover {
+      @apply text-white bg-orange border-dark-gray;
+
+      .btn-icon {
+        @apply border-dark-gray;
+        svg path {
+          @apply fill-white;
+        }
+      }
+    }
+  }
+}

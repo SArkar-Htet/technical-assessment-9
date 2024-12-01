@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  @apply text-gray;
+}
+body h1, body h2, body h3 {
+  @apply font-medium;
+}
+body section .content-article {
+  @apply bg-dark-gray-2 border-2 border-dark-gray-1 rounded-[14px] py-8 xl:py-[60px] px-5 xl:px-10;
+}
+body section .content-article.personal-product {
+  @apply px-7 xl:px-14;
+}
+body section .content-article.ios-mb {
+  @apply pb-0 pt-6 xl:pt-12;
+}
+body section .content-article.ai-music-product {
+  @apply py-5 xl:py-10;
+}
+body section .content-article.ai-map {
+  @apply py-6 xl:py-12;
+}
+body img {
+  @apply size-auto object-center object-cover;
+}
+body .active-status {
+  @apply w-fit flex items-center justify-between gap-x-1 xs:gap-x-2.5 py-[5px] px-2.5 xs:px-[17px] rounded-[14px] bg-dark-gray border border-solid border-dark-gray-1;
+}
+
+.container {
+  @apply max-w-[1440px] w-full px-5 mx-auto;
+}
+
+@media (screen(md)) {
+  .container {
+    padding-inline: 7.778%;
+  }
+}
+.main-content {
+  grid-template-areas: "personal-info" "personal-jobs" "personal-exp" "ios-mb" "ai-music-product" "ai-map";
+}
+@media (screen(md)) {
+  .main-content {
+    grid-template-areas: "personal-info personal-info" "personal-jobs personal-exp" "personal-jobs ai-music-product" "ios-mb ai-music-product" "ios-mb ai-map";
+  }
+}
+
+.personal-info {
+  grid-area: personal-info;
+}
+
+.personal-jobs {
+  grid-area: personal-jobs;
+}
+
+.personal-exp {
+  grid-area: personal-exp;
+}
+
+.ios-mb {
+  grid-area: ios-mb;
+}
+
+.ai-music-product {
+  grid-area: ai-music-product;
+}
+
+:root {
+  --min-vw: 640;
+  --max-vw: 1440;
+  /* convert to px */
+  --min-vw-px: calc(var(--min-vw) * 1px);
+  --max-vw-px: calc(var(--max-vw) * 1px);
+  /* font sizes at $max_vw */
+  --text-extra-lg: 36;
+  --text-large: 24;
+  --text-default: 20;
+  --text-small: 16;
+  --text-extra-sm: 13;
+  /* font sizes at --min-vw */
+  --text-extra-lg-min: calc(var(--text-extra-lg) * 0.778);
+  --text-large-min: calc(var(--text-large) * 0.84);
+  --text-default-min: calc(var(--text-default) * 0.9);
+  --text-small-min: calc(var(--text-small) * 0.875);
+  --text-extra-sm-min: calc(var(--text-extra-sm) * 0.77);
+}
+
+body {
+  @apply font-primary text-default;
+}
+
+@layer components {
+  .font-primary {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .fluid-fs {
+    --max-fs: var(--text-default);
+    --min-fs: var(--text-default-min);
+    --slope: calc((var(--max-fs) - var(--min-fs)) / (var(--max-vw) - var(--min-vw)));
+    --min-fs-px: calc(var(--min-fs) * 1px);
+    --max-fs-px: calc(var(--max-fs) * 1px);
+    --fs-px: calc(var(--slope) * (100vw - var(--min-vw-px)) + var(--min-fs-px));
+    font-size: clamp(var(--min-fs-px), var(--fs-px), var(--max-fs-px));
+  }
+  .text-extra-lg {
+    @apply fluid-fs;
+    --max-fs: var(--text-extra-lg);
+    --min-fs: var(--text-extra-lg-min);
+    line-height: normal;
+    @apply tracking-[120%];
+  }
+  .text-large {
+    @apply fluid-fs;
+    --max-fs: var(--text-large);
+    --min-fs: var(--text-large-min);
+    line-height: 1.5;
+  }
+  .text-default {
+    @apply fluid-fs;
+    --max-fs: var(--text-default);
+    --min-fs: var(--text-default-min);
+    line-height: 1.5;
+  }
+  .text-small {
+    @apply fluid-fs;
+    --max-fs: var(--text-small);
+    --min-fs: var(--text-small-min);
+    line-height: 1.5;
+  }
+  .text-extra-sm {
+    @apply fluid-fs;
+    --max-fs: var(--text-extra-sm);
+    --min-fs: var(--text-extra-sm-min);
+    line-height: 1.5;
+  }
+}
+.nav-menu {
+  @apply uppercase;
+}
+.nav-menu li a {
+  @apply transition-all duration-300;
+  @apply hover:font-bold hover:text-orange-1;
+}
+.nav-menu.nav-menu-mb {
+  @apply absolute top-14 right-5 left-5 bg-dark-gray z-[99] rounded-[14px] border-2 border-dark-gray-1 text-white xs:hidden;
+}
+.nav-menu.nav-menu-mb li {
+  @apply mt-5 first:mt-0;
+}
+
+.menu-toggler span {
+  @apply block w-7 h-0.5 bg-white mt-1 first:mt-0;
+}
+
+.personal-info .btn-cta {
+  @apply flex items-center gap-x-3 bg-dark-gray rounded-[7px] border-[1.2px] border-dark-gray-1 font-medium;
+  @apply transition-colors duration-300;
+}
+.personal-info .btn-cta span {
+  @apply py-2.5;
+}
+.personal-info .btn-cta span.btn-icon {
+  @apply pl-1 border-l-[1.2px] border-dark-gray-1;
+  @apply transition-colors duration-300;
+}
+.personal-info .btn-cta span.btn-icon svg path {
+  @apply transition-colors duration-300;
+}
+.personal-info .btn-cta:hover {
+  @apply text-white bg-orange border-dark-gray;
+}
+.personal-info .btn-cta:hover .btn-icon {
+  @apply border-dark-gray;
+}
+.personal-info .btn-cta:hover .btn-icon svg path {
+  @apply fill-white;
+}
+
+.personal-jobs .job-info {
+  @apply mt-4 xl:mt-9 first:mt-0;
+}
+.personal-jobs .job-info a {
+  @apply flex items-center justify-between gap-5;
+}
+.personal-jobs .job-info a .job-title {
+  @apply text-large text-white font-medium transition-colors duration-300;
+}
+.personal-jobs .job-info a .year {
+  @apply block mt-3;
+}
+.personal-jobs .job-info a .company {
+  @apply block;
+}
+.personal-jobs .job-info a:hover .job-title {
+  @apply text-orange-1;
+}
+
+.personal-exp {
+  @apply grid gap-5 grid-cols-2;
+  grid-template-areas: "product-design product-design" "user-exp no-code";
+}
+.personal-exp .content-article {
+  @apply text-center flex-1 relative p-0.5 overflow-hidden border-none my-0;
+}
+.personal-exp .content-article.product-design {
+  grid-area: product-design;
+}
+.personal-exp .content-article.user-exp {
+  grid-area: user-exp;
+}
+.personal-exp .content-article.no-code {
+  grid-area: no-code;
+}
+.personal-exp .content-article .content {
+  @apply py-8 xl:py-[60px] px-5 xl:px-10 rounded-[14px];
+}
+.personal-exp .content-article.right-transparent {
+  background: linear-gradient(39deg, #262626 80%, #E63E21);
+}
+.personal-exp .content-article.right-transparent .content {
+  background: linear-gradient(249deg, rgba(230, 62, 33, 0.2) 18.59%, rgba(51, 19, 14, 0) 53.25%), #1B1B1B;
+}
+.personal-exp .content-article.left-transparent {
+  background: linear-gradient(228deg, #262626 80%, #E63E21);
+}
+.personal-exp .content-article.left-transparent .content {
+  background: linear-gradient(76deg, rgba(230, 62, 33, 0.2) 10.4%, rgba(51, 19, 14, 0) 25.53%), #1B1B1B;
+}
+
+.footer .footer-wrapper {
+  @apply rounded-[14px];
+  background: linear-gradient(197deg, #262626 80%, #E63E21);
+}
+.footer .footer-wrapper .footer-container {
+  @apply rounded-[14px];
+  background: linear-gradient(76deg, rgba(230, 62, 33, 0.2) 10.4%, rgba(51, 19, 14, 0) 25.53%), #1B1B1B;
+}/*# sourceMappingURL=main.css.map */

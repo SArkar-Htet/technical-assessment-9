@@ -1,0 +1,49 @@
+.container {
+  @apply max-w-[1440px] w-full px-5 mx-auto;
+}
+
+@media (screen(md)) {
+  .container {
+    padding-inline: $container_px;
+  }
+}
+
+.main-content {
+  grid-template-areas: 
+    "personal-info"
+    "personal-jobs"
+    "personal-exp"
+    "ios-mb"
+    "ai-music-product"
+    "ai-map"
+    ;
+  
+  @media (screen(md)) {
+    & {
+      grid-template-areas: 
+        "personal-info personal-info"
+        "personal-jobs personal-exp"
+        "personal-jobs ai-music-product"
+        "ios-mb ai-music-product"
+        "ios-mb ai-map"
+        // "ios-mb ai-map"
+        ;
+    }
+  }
+}
+
+.personal-info {
+  grid-area: personal-info;
+}
+.personal-jobs {
+  grid-area: personal-jobs;
+}
+.personal-exp {
+  grid-area: personal-exp;
+}
+.ios-mb {
+  grid-area: ios-mb;
+}
+.ai-music-product {
+  grid-area: ai-music-product;
+}

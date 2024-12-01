@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <script defer src="./js/app.js" type="module"></script>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="bg-dark-gray py-10 xl:py-16">
+  <header class="header" >
+    <nav class="container flex items-center max-xs:justify-between relative" x-data="{ open: false }">
+      <div class="logo p-2 md:p-2.5 xl:p-3 rounded-[48px] bg-dark-gray-2 border-2 border-solid border-dark-gray-1">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" class="size-7 md:size-8 xl:size-auto">
+            <path d="M0 11.9149C0 9.79976 1.71465 8.08511 3.82979 8.08511C5.94492 8.08511 7.65957 9.79976 7.65957 11.9149C7.65957 14.03 5.94492 15.7447 3.82979 15.7447C1.71465 15.7447 0 14.03 0 11.9149Z" fill="#F35034"/>
+            <path d="M0 20C0 17.8849 1.71465 16.1702 3.82979 16.1702C5.94492 16.1702 7.65957 17.8849 7.65957 20C7.65957 22.1151 5.94492 23.8298 3.82979 23.8298C1.71465 23.8298 0 22.1151 0 20Z" fill="#F35034"/>
+            <path d="M0 28.0851C0 25.97 1.71465 24.2553 3.82979 24.2553C5.94492 24.2553 7.65957 25.97 7.65957 28.0851C7.65957 30.2002 5.94492 31.9149 3.82979 31.9149C1.71465 31.9149 0 30.2002 0 28.0851Z" fill="#F35034"/>
+            <path d="M8.08511 3.82979C8.08511 1.71465 9.79976 0 11.9149 0C14.03 0 15.7447 1.71465 15.7447 3.82979C15.7447 5.94492 14.03 7.65957 11.9149 7.65957C9.79976 7.65957 8.08511 5.94492 8.08511 3.82979Z" fill="#F35034"/>
+            <path d="M8.08511 11.9149C8.08511 9.79976 9.79976 8.08511 11.9149 8.08511C14.03 8.08511 15.7447 9.79976 15.7447 11.9149C15.7447 14.03 14.03 15.7447 11.9149 15.7447C9.79976 15.7447 8.08511 14.03 8.08511 11.9149Z" fill="#F35034"/>
+            <path d="M8.08511 20C8.08511 17.8849 9.79976 16.1702 11.9149 16.1702C14.03 16.1702 15.7447 17.8849 15.7447 20C15.7447 22.1151 14.03 23.8298 11.9149 23.8298C9.79976 23.8298 8.08511 22.1151 8.08511 20Z" fill="#F35034"/>
+            <path d="M8.08511 28.0851C8.08511 25.97 9.79976 24.2553 11.9149 24.2553C14.03 24.2553 15.7447 25.97 15.7447 28.0851C15.7447 30.2002 14.03 31.9149 11.9149 31.9149C9.79976 31.9149 8.08511 30.2002 8.08511 28.0851Z" fill="#F35034"/>
+            <path d="M8.08511 36.1702C8.08511 34.0551 9.79976 32.3404 11.9149 32.3404C14.03 32.3404 15.7447 34.0551 15.7447 36.1702C15.7447 38.2854 14.03 40 11.9149 40C9.79976 40 8.08511 38.2854 8.08511 36.1702Z" fill="#F35034"/>
+            <path d="M16.1702 3.82979C16.1702 1.71465 17.8849 0 20 0C22.1151 0 23.8298 1.71465 23.8298 3.82979C23.8298 5.94492 22.1151 7.65957 20 7.65957C17.8849 7.65957 16.1702 5.94492 16.1702 3.82979Z" fill="#F35034"/>
+            <path d="M16.1702 11.9149C16.1702 9.79976 17.8849 8.08511 20 8.08511C22.1151 8.08511 23.8298 9.79976 23.8298 11.9149C23.8298 14.03 22.1151 15.7447 20 15.7447C17.8849 15.7447 16.1702 14.03 16.1702 11.9149Z" fill="#F35034"/>
+            <path d="M16.1702 20C16.1702 17.8849 17.8849 16.1702 20 16.1702C22.1151 16.1702 23.8298 17.8849 23.8298 20C23.8298 22.1151 22.1151 23.8298 20 23.8298C17.8849 23.8298 16.1702 22.1151 16.1702 20Z" fill="#F35034"/>
+            <path d="M16.1702 28.0851C16.1702 25.97 17.8849 24.2553 20 24.2553C22.1151 24.2553 23.8298 25.97 23.8298 28.0851C23.8298 30.2002 22.1151 31.9149 20 31.9149C17.8849 31.9149 16.1702 30.2002 16.1702 28.0851Z" fill="#F35034"/>
+            <path d="M16.1702 36.1702C16.1702 34.0551 17.8849 32.3404 20 32.3404C22.1151 32.3404 23.8298 34.0551 23.8298 36.1702C23.8298 38.2854 22.1151 40 20 40C17.8849 40 16.1702 38.2854 16.1702 36.1702Z" fill="#F35034"/>
+            <path d="M24.2553 3.82979C24.2553 1.71465 25.97 0 28.0851 0C30.2002 0 31.9149 1.71465 31.9149 3.82979C31.9149 5.94492 30.2002 7.65957 28.0851 7.65957C25.97 7.65957 24.2553 5.94492 24.2553 3.82979Z" fill="#F35034"/>
+            <path d="M24.2553 11.9149C24.2553 9.79976 25.97 8.08511 28.0851 8.08511C30.2002 8.08511 31.9149 9.79976 31.9149 11.9149C31.9149 14.03 30.2002 15.7447 28.0851 15.7447C25.97 15.7447 24.2553 14.03 24.2553 11.9149Z" fill="#F35034"/>
+            <path d="M24.2553 20C24.2553 17.8849 25.97 16.1702 28.0851 16.1702C30.2002 16.1702 31.9149 17.8849 31.9149 20C31.9149 22.1151 30.2002 23.8298 28.0851 23.8298C25.97 23.8298 24.2553 22.1151 24.2553 20Z" fill="#F35034"/>
+            <path d="M24.2553 28.0851C24.2553 25.97 25.97 24.2553 28.0851 24.2553C30.2002 24.2553 31.9149 25.97 31.9149 28.0851C31.9149 30.2002 30.2002 31.9149 28.0851 31.9149C25.97 31.9149 24.2553 30.2002 24.2553 28.0851Z" fill="#F35034"/>
+            <path d="M24.2553 36.1702C24.2553 34.0551 25.97 32.3404 28.0851 32.3404C30.2002 32.3404 31.9149 34.0551 31.9149 36.1702C31.9149 38.2854 30.2002 40 28.0851 40C25.97 40 24.2553 38.2854 24.2553 36.1702Z" fill="#F35034"/>
+            <path d="M32.3404 11.9149C32.3404 9.79976 34.0551 8.08511 36.1702 8.08511C38.2854 8.08511 40 9.79976 40 11.9149C40 14.03 38.2854 15.7447 36.1702 15.7447C34.0551 15.7447 32.3404 14.03 32.3404 11.9149Z" fill="#F35034"/>
+            <path d="M32.3404 20C32.3404 17.8849 34.0551 16.1702 36.1702 16.1702C38.2854 16.1702 40 17.8849 40 20C40 22.1151 38.2854 23.8298 36.1702 23.8298C34.0551 23.8298 32.3404 22.1151 32.3404 20Z" fill="#F35034"/>
+            <path d="M32.3404 28.0851C32.3404 25.97 34.0551 24.2553 36.1702 24.2553C38.2854 24.2553 40 25.97 40 28.0851C40 30.2002 38.2854 31.9149 36.1702 31.9149C34.0551 31.9149 32.3404 30.2002 32.3404 28.0851Z" fill="#F35034"/>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="nav-menu hidden xs:flex items-center justify-between flex-1 text-white rounded-[48px] bg-dark-gray-2 border-2 border-solid border-dark-gray-1 py-2.5 px-3 xs:px-8 md:py-3 md:px-20 xl:py-5 xl:px-[66px] ">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <ul class="nav-menu nav-menu-mb py-6 px-5 " x-show="open">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button class="menu-toggler block xs:hidden rounded-[48px] py-3 px-1.5" @click="open = ! open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="container mx-auto my-5">
+    <section class="main-content grid gap-5 grid-cols-1 md:grid-cols-2">
+      <article class="content-article personal-info xl:px-[42px]">
+
+        <div class="flex flex-wrap justify-between font-medium gap-2.5">
+          <h2 class="text-large">UI/UX Designer</h2>
+
+          <div class="active-status ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+              <circle cx="4.5" cy="4.5" r="4.5" fill="#E63E21"/>
+            </svg>
+
+            <span class="text-extra-sm uppercase">available for job</span>
+          </div>
+        </div>
+
+        <div class="profile mt-9 xl:mt-[70px] sm:flex sm:flex-row-reverse items-center justify-between">
+          <div class="avatar z-0 ">
+            <div class="avatar-shadow p-2 xl:p-[10.36px] bg-dark-gray-3 border border-dark-gray-4 w-fit rounded-full">
+              <img src="./images/avatar.svg" alt="Zainab Nisa's avatar" class="relative size-32 xl:size-auto aspect-square">
+            </div>
+          </div>
+
+          <div class="max-w-72 max-xs:mt-5">
+            <h1 class="text-white font-semibold text-extra-lg">I’m Zainab Nisa</h1>
+
+            <p class="mt-2 lg:mt-4">I design digital products with great experience.</p>
+
+            <div class="btn-wrapper text-small flex items-center gap-2.5 lg:gap-3.5 font-medium mt-3.5 xl:mt-7">
+              <button class="btn-cta px-[7px]">
+                <span class="btn-text">Hire me</span> 
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 12.9985H13V17.9985C13 18.2637 12.8946 18.518 12.7071 18.7056C12.5196 18.8931 12.2652 18.9985 12 18.9985C11.7348 18.9985 11.4804 18.8931 11.2929 18.7056C11.1054 18.518 11 18.2637 11 17.9985V12.9985H6C5.73478 12.9985 5.48043 12.8931 5.29289 12.7056C5.10536 12.518 5 12.2637 5 11.9985C5 11.7333 5.10536 11.4789 5.29289 11.2914C5.48043 11.1038 5.73478 10.9985 6 10.9985H11V5.99847C11 5.73326 11.1054 5.4789 11.2929 5.29137C11.4804 5.10383 11.7348 4.99847 12 4.99847C12.2652 4.99847 12.5196 5.10383 12.7071 5.29137C12.8946 5.4789 13 5.73326 13 5.99847V10.9985H18C18.2652 10.9985 18.5196 11.1038 18.7071 11.2914C18.8946 11.4789 19 11.7333 19 11.9985C19 12.2637 18.8946 12.518 18.7071 12.7056C18.5196 12.8931 18.2652 12.9985 18 12.9985Z" fill="#C0C0C0"/>
+                  </svg>
+                </span>
+              </button>
+              <button class="btn-cta px-2.5">
+                <span class="btn-text ">Copy Email</span>
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M20.25 3.00049H8.25C8.05109 3.00049 7.86032 3.07951 7.71967 3.22016C7.57902 3.36081 7.5 3.55158 7.5 3.75049V7.50049H3.75C3.55109 7.50049 3.36032 7.57951 3.21967 7.72016C3.07902 7.86081 3 8.05158 3 8.25049V20.2505C3 20.4494 3.07902 20.6402 3.21967 20.7808C3.36032 20.9215 3.55109 21.0005 3.75 21.0005H15.75C15.9489 21.0005 16.1397 20.9215 16.2803 20.7808C16.421 20.6402 16.5 20.4494 16.5 20.2505V16.5005H20.25C20.4489 16.5005 20.6397 16.4215 20.7803 16.2808C20.921 16.1402 21 15.9494 21 15.7505V3.75049C21 3.55158 20.921 3.36081 20.7803 3.22016C20.6397 3.07951 20.4489 3.00049 20.25 3.00049ZM15 19.5005H4.5V9.00049H15V19.5005ZM19.5 15.0005H16.5V8.25049C16.5 8.05158 16.421 7.86081 16.2803 7.72016C16.1397 7.57951 15.9489 7.50049 15.75 7.50049H9V4.50049H19.5V15.0005Z" fill="#C0C0C0"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="content-article personal-jobs">
+        <h2 class="flex items-center gap-3 text-large">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <circle cx="5" cy="4.51221" r="4.5" fill="#C0C0C0"/>
+          </svg>
+          Recent Work
+        </h2>
+
+        <div class="mt-9 xl:mt-[70px] ">
+          <article class="job-info">
+            <a href="#" class="">
+              <div>
+                <p class="job-title">Product designer</p>
+                <span class="year">
+                  <time datetime="2023">2023</time> - <time datetime="2024">Present</time>
+                </span>
+              </div>
+  
+              <span class="company">Figma</span>
+            </a>
+          </article>
+
+          <article class="job-info">
+            <a href="#" class="">
+              <div>
+                <p class="job-title">UI/UX designer</p>
+                <span class="year">
+                  <time datetime="2021">2021</time> - <time datetime="2022">2022</time>
+                </span>
+              </div>
+  
+              <span class="company">Google</span>
+            </a>
+          </article>
+
+          <article class="job-info">
+            <a href="#" class="">
+              <div>
+                <p class="job-title">Product designer</p>
+                <span class="year">
+                  <time datetime="2023">2023</time> - <time datetime="2024">Present</time>
+                </span>
+              </div>
+  
+              <span class="company">Figma</span>
+            </a>
+          </article>
+
+          <article class="job-info">
+            <a href="#" class="">
+              <div>
+                <p class="job-title">Product designer</p>
+                <span class="year">
+                  <time datetime="2023">2023</time> - <time datetime="2024">Present</time>
+                </span>
+              </div>
+  
+              <span class="company">Figma</span>
+            </a>
+          </article>
+        </div>
+      </article>
+
+      <section class="personal-exp">
+        <article class="content-article product-design right-transparent">
+          <div class="content">
+            <h2 class="text-large">Product design</h2>
+          </div>
+        </article>
+        
+        <article class="content-article user-exp right-transparent">
+          <div class="content">
+            <h2 class="text-large">User Experience</h2>
+          </div>
+        </article>
+        
+        <article class="content-article no-code left-transparent">
+          <div class="content">
+            <h2 class="text-large">NoCode develop</h2>
+          </div>
+        </article>
+
+      </section>
+
+      <article class="content-article personal-product ios-mb ">
+        <div class="title flex items-center justify-between">
+          <div class="text">
+            <h2 class="text-large font-semibold text-white">iOS Mobile app</h2>
+            <p class="mt-2 xl:mt-4">Product develop</p>
+          </div>
+
+          <a href="#">
+            <img src="./images/arrow-up-line.svg" alt="" class="">
+          </a>
+        </div>
+
+        <div class="mt-7 xl:mt-14">
+          <img src="./images/iPhone_Space_gray.png" alt="iOS Mobile app" class="mx-auto">
+        </div>
+      </article>
+
+      <article class="content-article personal-product ai-music-product">
+        <div class="title flex items-center justify-between">
+          <div class="text">
+            <h2 class="text-large font-semibold text-white">AI Music product</h2>
+            <p class="mt-2 xl:mt-4">UX Case study</p>
+          </div>
+
+          <a href="#">
+            <img src="./images/arrow-up-line.svg" alt="" class="">
+          </a>
+        </div>
+
+        <div class="mt-9 xl:mt-[72px]">
+          <img src="./images/ai_music_product.png" alt="ai music product" class="mx-auto aspect-auto w-auto h-[306px]">
+        </div>
+      </article>
+
+      <article class="content-article personal-product ai-map">
+        <div class="title flex items-center justify-between">
+          <div class="text">
+            <h2 class="text-large font-semibold text-white">AI Map redesign</h2>
+            <p class="mt-2 xl:mt-4">UX Case study</p>
+          </div>
+
+          <a href="#">
+            <img src="./images/arrow-up-line.svg" alt="" class="">
+          </a>
+        </div>
+
+        <div class="mt-6 xl:mt-12">
+          <img src="./images/ai_map.png" alt="ai map redesign" class="mx-auto aspect-auto w-[321px]">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer-wrapper p-0.5">
+      <div class="footer-container py-6 xl:py-11 px-6 xl:px-[46px] flex items-center justify-between flex-wrap">
+        <div class="copyright order-1">
+          <p class="text-large font-medium">Portfolio 2024</p>
+        </div>
+    
+        <ul class="social flex items-center gap-2.5 lg:gap-3 order-3">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkdIn</a></li>
+        </ul>
+    
+        <div class="active-status order-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <circle cx="4.5" cy="4.5" r="4.5" fill="#E63E21"/>
+          </svg>
+    
+          <span class="text-extra-sm uppercase">available for job</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
